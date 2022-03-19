@@ -1,0 +1,3 @@
+[submodule "Lapis/vendor/spdlog"]
+	path = Lapis/vendor/spdlog
+	url = https://github.com/gabime/spdlog
