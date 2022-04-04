@@ -37,6 +37,12 @@
     <ClInclude Include="src\Lapis\Events\MouseEvent.h">
       <Filter>Lapis\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Lapis\Layer.h">
+      <Filter>Lapis</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Lapis\LayerStack.h">
+      <Filter>Lapis</Filter>
+    </ClInclude>
     <ClInclude Include="src\Lapis\Log.h">
       <Filter>Lapis</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lapis\Application.cpp">
+      <Filter>Lapis</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lapis\Layer.cpp">
+      <Filter>Lapis</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lapis\LayerStack.cpp">
       <Filter>Lapis</Filter>
     </ClCompile>
     <ClCompile Include="src\Lapis\Log.cpp">
