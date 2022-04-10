@@ -10,12 +10,12 @@ public:
 
 	void OnUpdate() override
 	{
-		LP_INFO("ExampleLayer::Update");
+		
 	}
 
 	void OnEvent(Lapis::Event& event) override
 	{
-		LP_TRACE("{0}", event);
+		
 	}
 };
 
@@ -25,6 +25,7 @@ public:
 	Sandbox() 
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Lapis::ImGuiLayer);
 	}
 
 	~Sandbox()

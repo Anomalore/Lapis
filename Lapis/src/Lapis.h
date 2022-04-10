@@ -5,6 +5,9 @@
 #include "Lapis/Application.h"
 #include "Lapis/Layer.h"
 #include "Lapis/Log.h"
+#include "Lapis/Input.h"
+
+#include "Lapis/ImGui/ImGuiLayer.h"
 
 // --Entry Point----------------------------------
 #include "Lapis/EntryPoint.h"

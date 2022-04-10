@@ -7,6 +7,7 @@
 
 #include <glad/glad.h>
 
+
 namespace Lapis
 {
 	static bool s_GLFWInitialized = false;
@@ -98,6 +99,18 @@ namespace Lapis
 					data.EventCallback(event);
 					break;
 				}
+
+			});
+
+
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int character)
+			{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+
+
+				KeyTypedEvent event(character);
+				data.EventCallback(event);
 			});
 
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
