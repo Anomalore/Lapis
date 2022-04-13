@@ -70,6 +70,8 @@
     <ClInclude Include="src\lppch.h" />
     <ClInclude Include="src\Lapis\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Lapis\KeyCodes.h" />
+    <ClInclude Include="src\Lapis\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lapis\Application.cpp">

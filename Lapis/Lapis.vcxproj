@@ -159,9 +159,11 @@
     <ClInclude Include="src\Lapis\Events\MouseEvent.h" />
     <ClInclude Include="src\Lapis\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Lapis\Input.h" />
+    <ClInclude Include="src\Lapis\KeyCodes.h" />
     <ClInclude Include="src\Lapis\Layer.h" />
     <ClInclude Include="src\Lapis\LayerStack.h" />
     <ClInclude Include="src\Lapis\Log.h" />
+    <ClInclude Include="src\Lapis\MouseButtonCodes.h" />
     <ClInclude Include="src\Lapis\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />

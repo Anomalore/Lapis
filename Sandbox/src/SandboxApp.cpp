@@ -10,7 +10,8 @@ public:
 
 	void OnUpdate() override
 	{
-		
+		if (Lapis::Input::IsKeyPressed(LP_KEY_TAB))
+			LP_INFO("Tab key is pressed!");
 	}
 
 	void OnEvent(Lapis::Event& event) override
