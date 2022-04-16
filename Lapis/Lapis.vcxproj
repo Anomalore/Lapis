@@ -157,7 +157,6 @@
     <ClInclude Include="src\Lapis\Events\Event.h" />
     <ClInclude Include="src\Lapis\Events\KeyEvent.h" />
     <ClInclude Include="src\Lapis\Events\MouseEvent.h" />
-    <ClInclude Include="src\Lapis\ImGui\ImGuiBuild.h" />
     <ClInclude Include="src\Lapis\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Lapis\Input.h" />
     <ClInclude Include="src\Lapis\KeyCodes.h" />
@@ -172,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Lapis\Application.cpp" />
+    <ClCompile Include="src\Lapis\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Lapis\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Lapis\Layer.cpp" />
     <ClCompile Include="src\Lapis\LayerStack.cpp" />

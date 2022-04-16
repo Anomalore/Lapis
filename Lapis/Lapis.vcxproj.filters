@@ -40,9 +40,6 @@
     <ClInclude Include="src\Lapis\Events\MouseEvent.h">
       <Filter>Lapis\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Lapis\ImGui\ImGuiBuild.h">
-      <Filter>Lapis\ImGui</Filter>
-    </ClInclude>
     <ClInclude Include="src\Lapis\ImGui\ImGuiLayer.h">
       <Filter>Lapis\ImGui</Filter>
     </ClInclude>
@@ -78,6 +75,9 @@
   <ItemGroup>
     <ClCompile Include="src\Lapis\Application.cpp">
       <Filter>Lapis</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Lapis\ImGui\ImGuiBuild.cpp">
+      <Filter>Lapis\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Lapis\ImGui\ImGuiLayer.cpp">
       <Filter>Lapis\ImGui</Filter>
