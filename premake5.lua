@@ -108,6 +108,7 @@ project "Sandbox"
 	includedirs 
 	{
 		"Lapis/vendor/spdlog/include",
+		"Lapis/vendor",
 		"Lapis/src"
 	}
 

@@ -7,6 +7,8 @@
 #include "Lapis/Events/Event.h"
 #include "Lapis/Events/ApplicationEvent.h"
 
+#include "Lapis/ImGui/ImGuiLayer.h"
+
 
 namespace Lapis 
 {
@@ -29,6 +31,7 @@ namespace Lapis
 		bool OnWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

@@ -1,5 +1,7 @@
 #include <Lapis.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public Lapis::Layer
 {
 public:
@@ -14,6 +16,13 @@ public:
 			LP_INFO("Tab key is pressed!");
 	}
 
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+	}
+
 	void OnEvent(Lapis::Event& event) override
 	{
 		
@@ -26,7 +35,6 @@ public:
 	Sandbox() 
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Lapis::ImGuiLayer);
 	}
 
 	~Sandbox()
