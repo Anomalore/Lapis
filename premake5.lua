@@ -26,8 +26,9 @@ group ""
 
 project "Lapis"
 	location "Lapis"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
 	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -51,23 +52,30 @@ project "Lapis"
 		"%{IncludeDir.ImGui}"
 	}
 
-	links
+	defines 
 	{
-		"GLFW",
-		"Glad",
-		"ImGui",
-		"opengl32.lib"
+		"GLFW_INCLUDE_NONE"
 	}
 
+	filter "system:Linux"
+		files
+		{
+			"%{prj.name}/vendor/imgui/*.cpp",
+			"%{prj.name}/vendor/Glad/src/glad.c"
+		}
+
 	filter "system:windows"
-		cppdialect "C++17"
 		systemversion "latest"
 
 		defines
 		{
 			"LP_PLATFORM_WINDOWS",
 			"LP_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
+		}
+
+		links
+		{
+			"opengl32.lib",
 		}
 
 		postbuildcommands
@@ -114,7 +122,10 @@ project "Sandbox"
 
 	links
 	{
-		"Lapis"
+		"Lapis",
+		"GLFW",
+		"Glad",
+		"ImGui",
 	}
 
 	filter "system:windows"
@@ -125,7 +136,22 @@ project "Sandbox"
 		{
 			"LP_PLATFORM_WINDOWS"
 		}
-	
+
+	filter "system:linux"
+		cppdialect "C++17"
+
+		links
+		{
+			"Glad",
+			"GLFW",
+			"ImGui",
+			"GL",
+			"pthread",
+			"m",
+			"X11",
+			"dl",
+			"GLFW",
+		}
 
 	filter "configurations:Debug"
 		defines "LP_DEBUG"
