@@ -4,3 +4,6 @@
 [submodule "Lapis/vendor/GLFW"]
 	path = Lapis/vendor/GLFW
 	url = https://github.com/Anomalore/glfw
+[submodule "Lapis/vendor/imgui"]
+	path = Lapis/vendor/imgui
+	url = https://github.com/Anomalore/imgui
