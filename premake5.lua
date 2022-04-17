@@ -26,7 +26,9 @@ group ""
 
 project "Lapis"
 	location "Lapis"
+	kind "StaticLib"
 	language "C++"
+	cppdialect "C++17"
 	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -55,17 +57,7 @@ project "Lapis"
 		"GLFW_INCLUDE_NONE"
 	}
 
-	links
-	{
-		"GLFW",
-		"Glad",
-		"ImGui",
-	}
-
 	filter "system:Linux"
-		kind "StaticLib"
-		cppdialect "C++17"
-
 		files
 		{
 			"%{prj.name}/vendor/imgui/*.cpp",
@@ -73,8 +65,6 @@ project "Lapis"
 		}
 
 	filter "system:windows"
-		kind "SharedLib"
-		cppdialect "C++17"
 		systemversion "latest"
 
 		defines
@@ -132,7 +122,10 @@ project "Sandbox"
 
 	links
 	{
-		"Lapis"
+		"Lapis",
+		"GLFW",
+		"Glad",
+		"ImGui",
 	}
 
 	filter "system:windows"
